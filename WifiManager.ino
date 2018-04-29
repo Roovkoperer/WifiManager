@@ -34,4 +34,11 @@ void loop()
   lcd.print("WLAN!");
   lcd.setCursor(0,1);
   lcd.print(String(millis()/1000) + "sec");
+  
+  lcd.setCursor(0,0);
+  //lcd.autoscroll();
+  lcd.print("Going into deep sleep for 20 seconds");
+  //lcd.scrollDisplayRight();
+  
+  ESP.deepSleep(20e6); // 20e6 is 20 microseconds
 }
